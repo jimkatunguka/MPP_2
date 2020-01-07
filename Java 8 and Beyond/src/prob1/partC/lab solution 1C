@@ -1,0 +1,9 @@
+A HashMap uses the hashcode value of an object to 
+find out how the object would be stored in the collection.
+
+if objects are equal according to the equals method, 
+then calling the hashcode method on each of them must 
+produce the same result.
+
+The Haschcode was not overriden yet a hashmap is being used
+to remove duplicates.

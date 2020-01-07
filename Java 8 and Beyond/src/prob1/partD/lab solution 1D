@@ -1,0 +1,4 @@
+The HashMap is used to check for duplicates. 
+The equals and hashcode are well overridden but the
+setVisited() method changes the hashmap values
+every time it is updated

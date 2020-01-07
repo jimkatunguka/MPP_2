@@ -1,0 +1,3 @@
+The equals method in the Employee class is not
+a correct override of the superclass Object equals method.
+The listsAreEqual method therefore will use the original equals method and return a false.
