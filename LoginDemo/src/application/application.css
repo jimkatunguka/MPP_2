@@ -1,0 +1,21 @@
+.background {
+	-fx-background-color: rgb(192.0,192.0,192.0);
+}
+
+.label1{
+	-fx-font-size: 11.0pt;
+	-fx-text-fill: rgb(15,170,50);
+
+}
+
+.label2{
+	-fx-font-size: 11.0pt;
+	-fx-text-fill: blue;
+
+}
+
+.label3{
+	-fx-font-size: 11.0pt;
+	-fx-text-fill: red;
+
+}
