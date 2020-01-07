@@ -1,0 +1,2 @@
+P1 is a PersonWithJob and has all the features of Person
+P1 compared to its parent P2 will return true but P2 is a parent of P1 and thus P2 cannot have access to extra features of P1.
