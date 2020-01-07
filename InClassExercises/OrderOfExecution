@@ -1,0 +1,12 @@
+Order of execution
+
+Initializing superclass static variable superInt
+Executing superclass static block
+Initializing subclass static variable subInt
+Executing subclass static block
+Initialzing superclass instance variable superInstanceInt
+Running superclass object initialization block
+Running superclass constructor
+Running subclass object initialization block
+Initialzing subclass instance variable subInstanceInt
+Running subclass constructor
