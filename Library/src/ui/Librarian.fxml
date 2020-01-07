@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LibrarianPageController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="364.0" prefWidth="439.0" />
+    <TabPane layoutX="10.0" layoutY="10.0" prefHeight="528.0" prefWidth="634.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Checkout Book">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <GridPane layoutX="24.0" layoutY="45.0" prefHeight="188.0" prefWidth="335.0">
+                  <children>
+                    <Label text="Book" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <ComboBox fx:id="bookCopySelectBox" editable="false" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label text="Member" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <ComboBox fx:id="memberSelectBox" editable="false" prefHeight="25.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label text="Return Date" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="returnDateField" prefHeight="25.0" prefWidth="254.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button fx:id="checkoutButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Checkout" GridPane.rowIndex="3" />
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="68.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="267.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                        <Button fx:id="libLogoutButton" layoutX="307.0" layoutY="250.0" mnemonicParsing="false" text="LogOut" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="viewRecordsTab" text="View Checkout Records">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.20081967213114754" layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="479.0" prefWidth="618.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="66.0" prefWidth="616.0">
+                                 <children>
+                                    <Button fx:id="showAllBtn" layoutX="178.0" layoutY="15.0" mnemonicParsing="false" text="Show All" />
+                                    <Button fx:id="showOverDueBtn" layoutX="349.0" layoutY="16.0" mnemonicParsing="false" text="Show Overdue" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="378.0" prefWidth="616.0">
+                                 <children>
+                                    <TableView fx:id="checkoutRecordsTable" layoutX="8.0" prefHeight="375.0" prefWidth="601.0">
+                                      <columns>
+                                        <TableColumn fx:id="bookColumn" prefWidth="136.0" text="Book" />
+                                        <TableColumn fx:id="memberColumn" prefWidth="159.0" text="Member" />
+                                          <TableColumn fx:id="checkoutDateColumn" prefWidth="116.0" text="FromDate" />
+                                          <TableColumn fx:id="dueDateColumn" prefWidth="103.0" text="DueDate" />
+                                          <TableColumn fx:id="statusColumn" prefWidth="86.0" text="IsDue" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
